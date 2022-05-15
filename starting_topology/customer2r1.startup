@@ -1,4 +1,4 @@
-ifconfig eth0 10.200.1.2 netmask 255.255.255.252 up
+ifconfig eth0 10.20.201.2 netmask 255.255.255.252 up
 ifconfig lo:0 200.1.0.1 netmask 255.255.255.0 up
 /etc/init.d/zebra start
 /etc/init.d/bgpd start
