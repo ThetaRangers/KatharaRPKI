@@ -1,0 +1,3 @@
+export KRILL_FQDN="rpki.example.net"
+export KRILL_CLI_TOKEN="gr"
+export TZ=Europe/Rome
