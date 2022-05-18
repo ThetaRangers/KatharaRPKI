@@ -2,7 +2,7 @@ ifconfig eth0 10.30.150.1 netmask 255.255.255.252 up
 ifconfig eth1 10.0.0.1 netmask 255.255.255.252 up
 ifconfig eth2 10.0.1.1 netmask 255.255.255.252 up
 ifconfig lo:0 30.1.0.1 netmask 255.255.0.0 up
-ifconfig lo:1 30.255.0.1
+ifconfig lo:1 30.255.0.1 netmask 255.255.255.255 up
 /etc/init.d/zebra start
 /etc/init.d/bgpd start
 /etc/init.d/ospfd start
