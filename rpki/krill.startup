@@ -1,3 +1,10 @@
 ifconfig eth0 10.1.42.2 netmask 255.255.255.252 up
 ifconfig lo:0 42.42.42.42 netmask 255.255.255.255 up
+echo "127.0.0.1 rpki-server.org" >> /etc/hosts
+service haproxy start
+(krill -c /var/krill/krill.conf) &
+chmod +x /setup_ca.sh
+chmod +x /add_roas.sh
+(sleep 5; bash /setup_ca.sh  nsd_ca) &
 /etc/init.d/frr start
+
