@@ -2,6 +2,7 @@ ifconfig eth0 10.0.1.2 netmask 255.255.255.252 up
 ifconfig eth1 10.0.2.2 netmask 255.255.255.252 up
 ifconfig eth2 10.254.254.20 netmask 255.255.255.0 up
 ifconfig lo:0 20.255.0.3 netmask 255.255.255.255 up
-/etc/init.d/frr start
+
+service frr start
 
 (sleep 75; vtysh -c "rpki start") &
