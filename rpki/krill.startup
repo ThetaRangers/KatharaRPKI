@@ -5,6 +5,7 @@ service haproxy start
 (krill -c /var/krill/krill.conf) &
 chmod +x /setup_ca.sh
 chmod +x /add_roas.sh
-(sleep 5; bash /setup_ca.sh  nsd_ca) &
+(sleep 10; bash /setup_ca.sh nsd_ca) &
+(sleep 20; bash /add_roas.sh nsd_ca) &
 /etc/init.d/frr start
 
