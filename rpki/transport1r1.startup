@@ -3,6 +3,8 @@ ifconfig eth1 10.0.0.1 netmask 255.255.255.252 up
 ifconfig eth2 10.1.42.1 netmask 255.255.255.252 up
 ifconfig lo:0 1.255.0.1 netmask 255.255.255.255 up
 
+update-ca-certificates --fresh
+
 echo "42.42.42.42  rpki-server.org" >> /etc/hosts
 mkdir -p /root/.rpki-cache/tals/
 mkdir -p /root/.rpki-cache/repository
